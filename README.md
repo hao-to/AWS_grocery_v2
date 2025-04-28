@@ -164,6 +164,6 @@ We welcome contributions! Please follow these steps:
 
 This project is licensed under the MIT License.
 
-
-
+---
+> **Note:** This project is based on the original [GroceryMate](https://github.com/AlejandroRomanIbanez/AWS_grocery) application created by Alejandro Roman Ibanez.
 
