@@ -13,3 +13,29 @@ resource "aws_key_pair" "grocerymate_key" {
   key_name = "grocerymate-key"
   public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC6fYaERv8qcZOLyKKDJ0fFXj+mbqW9RfW28PmRm6KXLV5miVgpasf4iei1AVMg6aLG0UJg3KaaIj4qCJl5oZns8imnuyDhPOOlENpkqSxveL4gE6fXtpF/xuljH1+u5Cpue/coejkFdN5Z+1SH9cQI2FCHu3N7zPdc/hl7/lpSOTkQFBquVwV9nR8WLWJW9emohjqQSmxq0m5YWf7wjE16e1Q9obKQxklSjIPsP08AARFOBF+CS9SLN/rHpkD3z/piA7lrCFXtuzfL5WdbtKZ+oKPCowndLKvQ0BHVPdaIzS9l12YLekhXukRLaYi/a6QZaJvXTO21kc8O3/hl0YaqBfzoW4wGAYz6PYDhhd7oLDjiBAeknsmmNEoVZhfRiVZuTzWNDuzEVuk5zx70EAnHxKXI6UVqPdaMsX5fSATe6DEcz0iD7tbrOvLJWwCctqotcpxihTMtTKC+A07Svv3mzw69f8AXrq6Hw8jaS++pYqAjbG8CbCZiCbHyT2QMaHIKMzdITWsNV+a0RuTpgkeTFobspalxpnXDU2AwIzyTzboLrDrpSRtPJiEeMTnIP+t3O0qxRoM4m8eViLB9ojWFSYT857eYakpLCqKeuPc9/tkAnifs6T+tM/HLqPJ+B0cTg4WbdmbUoH1b25VfUro3JJuq1CvySAOf1XBgPqV5Gw== grocerymate"
 }
+
+# 4 Define a security group for EC2 that allows SSH access (port 22)
+resource "aws_security_group" "grocerymate_sg" {
+  name        = "grocerymate-sg"
+  description = "Allow SSH inbound traffic"
+  vpc_id      = data.aws_vpc.default.id
+
+  ingress {
+    description = "SSH"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["77.183.125.82/32"]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "grocerymate-sg"
+  }
+}
