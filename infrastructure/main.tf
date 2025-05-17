@@ -39,3 +39,19 @@ resource "aws_security_group" "grocerymate_sg" {
     Name = "grocerymate-sg"
   }
 }
+
+# 5 Create an EC2 instance and attach the security group
+resource "aws_instance" "grocerymate_ec2" {
+  ami = "ami-02b7d5b1e55a7b5f1"
+  instance_type = "t2.micro"
+  vpc_security_group_ids = [aws_security_group.grocerymate_sg.id]
+  key_name = aws_key_pair.grocerymate_key.key_name
+
+  tags = {
+    Name = "grocerymate-ec2"
+  }
+}
+# Output the public IP of the EC2 instance
+output "ec2_public_ip" {
+  value = aws_instance.grocerymate_ec2.public_ip
+}
