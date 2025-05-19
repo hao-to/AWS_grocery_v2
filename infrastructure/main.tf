@@ -99,3 +99,21 @@ resource "aws_eip_association" "grocerymate_eip_assoc" {
   instance_id   = aws_instance.grocerymate_ec2.id
   allocation_id = aws_eip.grocerymate_eip.id
 }
+
+# 9 Create the PostgreSQL RDS instance
+resource "aws_db_instance" "grocerymate_rds" {
+  allocated_storage    = 20
+  engine               = "postgres"
+  engine_version       = "15.13"
+  instance_class       = "db.t3.micro"
+  db_name              = "grocerymate_db"
+  username             = "postgres"
+  password             = "H4rd2Guess123!"
+  skip_final_snapshot  = true
+  publicly_accessible  = false
+  vpc_security_group_ids = [aws_security_group.grocerymate_rds_sg.id]
+
+  tags = {
+    Name = "grocerymate-rds"
+  }
+}
