@@ -52,11 +52,6 @@ resource "aws_instance" "grocerymate_ec2" {
     Name = "grocerymate-ec2"
   }
 }
-# Output the public IP of the EC2 instance
-output "ec2_public_ip" {
-  value = aws_instance.grocerymate_ec2.public_ip
-}
-
 
 # 6 Define a security group for RDS that only allows connections from EC2
 resource "aws_security_group" "grocerymate_rds_sg" {
@@ -69,7 +64,7 @@ resource "aws_security_group" "grocerymate_rds_sg" {
     from_port   = 5432
     to_port     = 5432
     protocol    = "tcp"
-    security_groups = [aws_security_group.grocerymate_sg.id]  # <-- erlaubt Zugriff nur von EC2-SG
+    security_groups = [aws_security_group.grocerymate_sg.id]  # <-- allows access only from EC2 SG
   }
 
   egress {
@@ -116,4 +111,13 @@ resource "aws_db_instance" "grocerymate_rds" {
   tags = {
     Name = "grocerymate-rds"
   }
+}
+# Outputs
+
+output "ec2_public_ip" {
+  value = aws_instance.grocerymate_ec2.public_ip
+}
+output "rds_endpoint" {
+  description = "The endpoint of the RDS PostgreSQL instance"
+  value       = aws_db_instance.grocerymate_rds.endpoint
 }
