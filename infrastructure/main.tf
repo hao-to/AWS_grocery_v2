@@ -25,7 +25,8 @@ resource "aws_security_group" "grocerymate_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["77.183.125.82/32"]
+    cidr_blocks = ["78.54.164.215/32"]
+
   }
 
   egress {
@@ -81,4 +82,20 @@ resource "aws_security_group" "grocerymate_rds_sg" {
   tags = {
     Name = "grocerymate-rds-sg"
   }
+}
+
+# 7 Allocate a static Elastic IP
+resource "aws_eip" "grocerymate_eip" {
+  domain = "vpc"
+
+  tags = {
+    Name = "grocerymate-eip"
+  }
+}
+
+
+# 8 Associate Elastic IP with EC2 instance
+resource "aws_eip_association" "grocerymate_eip_assoc" {
+  instance_id   = aws_instance.grocerymate_ec2.id
+  allocation_id = aws_eip.grocerymate_eip.id
 }
