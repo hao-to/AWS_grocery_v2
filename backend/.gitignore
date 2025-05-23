@@ -120,5 +120,3 @@ cython_debug/
 #Migrations
 migrations
 instance
-
-*.py~

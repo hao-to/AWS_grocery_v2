@@ -11,7 +11,7 @@ data "aws_vpc" "default" {
 # 3 Define SSH key pair for EC2 access
 resource "aws_key_pair" "grocerymate_key" {
   key_name = "grocerymate-key"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC6fYaERv8qcZOLyKKDJ0fFXj+mbqW9RfW28PmRm6KXLV5miVgpasf4iei1AVMg6aLG0UJg3KaaIj4qCJl5oZns8imnuyDhPOOlENpkqSxveL4gE6fXtpF/xuljH1+u5Cpue/coejkFdN5Z+1SH9cQI2FCHu3N7zPdc/hl7/lpSOTkQFBquVwV9nR8WLWJW9emohjqQSmxq0m5YWf7wjE16e1Q9obKQxklSjIPsP08AARFOBF+CS9SLN/rHpkD3z/piA7lrCFXtuzfL5WdbtKZ+oKPCowndLKvQ0BHVPdaIzS9l12YLekhXukRLaYi/a6QZaJvXTO21kc8O3/hl0YaqBfzoW4wGAYz6PYDhhd7oLDjiBAeknsmmNEoVZhfRiVZuTzWNDuzEVuk5zx70EAnHxKXI6UVqPdaMsX5fSATe6DEcz0iD7tbrOvLJWwCctqotcpxihTMtTKC+A07Svv3mzw69f8AXrq6Hw8jaS++pYqAjbG8CbCZiCbHyT2QMaHIKMzdITWsNV+a0RuTpgkeTFobspalxpnXDU2AwIzyTzboLrDrpSRtPJiEeMTnIP+t3O0qxRoM4m8eViLB9ojWFSYT857eYakpLCqKeuPc9/tkAnifs6T+tM/HLqPJ+B0cTg4WbdmbUoH1b25VfUro3JJuq1CvySAOf1XBgPqV5Gw== grocerymate"
+  public_key = file("public_key.pub")
 }
 
 # 4 Define a security group for EC2 that allows SSH access (port 22)
@@ -103,7 +103,7 @@ resource "aws_db_instance" "grocerymate_rds" {
   instance_class       = "db.t3.micro"
   db_name              = "grocerymate_db"
   username             = "postgres"
-  password             = "H4rd2Guess123!"
+  password             = var.db_password
   skip_final_snapshot  = true
   publicly_accessible  = false
   vpc_security_group_ids = [aws_security_group.grocerymate_rds_sg.id]
@@ -111,13 +111,4 @@ resource "aws_db_instance" "grocerymate_rds" {
   tags = {
     Name = "grocerymate-rds"
   }
-}
-# Outputs
-
-output "ec2_public_ip" {
-  value = aws_instance.grocerymate_ec2.public_ip
-}
-output "rds_endpoint" {
-  description = "The endpoint of the RDS PostgreSQL instance"
-  value       = aws_db_instance.grocerymate_rds.endpoint
 }
