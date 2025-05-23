@@ -3,3 +3,18 @@ frontend/frontend-build.zip
 frontend/temp_extract/
 frontend/src/config.js~
 venv/
+
+
+*.py~
+# Terraform state files
+terraform.tfstate
+terraform.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+terraform.tfvars
+
+# SSH private key
+*.pem
+
+.DS_Store
+
