@@ -25,7 +25,7 @@ resource "aws_security_group" "grocerymate_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["78.54.164.215/32"]
+    cidr_blocks = ["93.128.39.117/32"]
 
   }
 
