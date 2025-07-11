@@ -16,7 +16,7 @@ Welcome to my humble fork of the GroceryMate app – originally developed by my 
 - Connected to AWS and launched an EC2 instance in the default VPC
 - Connected to the EC2 instance and ran basic Linux commands
 - Forked the GroceryMate repo and deployed it on EC2
-- Made the app publicly accessible
+- Made the app accessible via browser
 - Attached an Elastic Load Balancer (ALB)
 - Configured a security group to protect the EC2 instance
 - Wrote a Dockerfile and tested the app locally and on EC2
