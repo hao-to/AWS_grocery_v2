@@ -32,6 +32,7 @@ at Masterschool's Software Engineering bootcamp. So, this repo is not the origin
 - Finalized project structure and wrote this README
 
 🔸 Note: I didn’t set up an Auto Scaling Group (ASG). It would’ve made sense together with the ALB, but it was optional and by then my brain, with its own ASG, had already scaled down to zero instances.
+Kidding aside: This bootcamp project was about grasping key AWS services, so I left out ASG to stay focused and finish in time.
  
 ## 🗺️ Architecture Diagram
 ![AWS Architecture Diagram](assets/aws-architecture-diagram.png)
