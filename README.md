@@ -1,6 +1,7 @@
 # GroceryMate – Cloud Journey Edition 🛒☁️
 
-Welcome to my humble fork of the GroceryMate app – originally developed by my AWS Cloud tutor and mentor at Masterschool's Software Engineering bootcamp. So, this repo is not the original masterpiece, but a chronicle of my hands-on journey through various AWS topics, one weekly task at a time.
+Welcome to my humble fork of the GroceryMate app – originally developed by my AWS Cloud tutor and mentor originally developed by my AWS Cloud tutor and mentor [@AlejandroRomanIbanez](https://github.com/AlejandroRomanIbanez)
+at Masterschool's Software Engineering bootcamp. So, this repo is not the original masterpiece, but a chronicle of my hands-on journey through various AWS topics, one weekly task at a time.
 
 ## 🧭 Table of Contents
 
