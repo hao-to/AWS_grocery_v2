@@ -11,7 +11,7 @@ It demonstrates the deployment of a containerized grocery web app using key AWS 
 ## 🧾 TL;DR
 
 Deployed on AWS using **Terraform** for Infrastructure as Code.  
-Includes: EC2, ALB, ASG, RDS, S3, CloudWatch (logs & alarms).
+Includes: **EC2, ALB, ASG, RDS, S3, CloudWatch** (logs & alarms).
 
 ---
 
@@ -41,7 +41,7 @@ This **is** a real-world deployment scenario showing how I set up cloud infrastr
 - **EC2** – runs the Docker container  
 - **Application Load Balancer (ALB)** – routes traffic and checks instance health  
 - **Auto Scaling Group (ASG)** – launches new EC2s  
-  The [infamous Taylor Swift ticket sale crash](https://fortune.com/2023/07/11/ticketmaster-france-crashes-taylor-swift-eras-tour-1-million-queue/?utm_source=chatgpt.com) is a perfect real-life example of how infrastructure issues can scale out of control – and how such incidents help turn abstract AWS theory into something tangible.  
+  The infamous [Taylor Swift ticket sale crash](https://fortune.com/2023/07/11/ticketmaster-france-crashes-taylor-swift-eras-tour-1-million-queue/?utm_source=chatgpt.com) is a perfect real-life example of how infrastructure issues can scale out of control – and how such incidents help turn abstract AWS theory into something tangible.  
   *SideNote:* I only know about this because I have a teenager at home who's a Swiftie.  
 - **Amazon RDS (PostgreSQL)** – managed relational database  
 - **Amazon S3** – stores user-uploaded avatars  
@@ -142,8 +142,7 @@ It was about making existing software production-ready in the cloud.
 It taught me how the pieces of cloud infrastructure fit together, how to troubleshoot under pressure, and how to think like a cloud engineer, not just a developer.
 
 If this infrastructure were a partner, you'd just have to say:  
-**"Clean the kitchen."**  and without saying more, the dishes would be done,  
-the trash taken out, the counters wiped, and the floor mopped.  
+**"Clean the kitchen."**  and without saying more, the dishes would be done, the trash taken out, the counters wiped, and the floor mopped.  
 Everything running smoothly in the background – just like good infrastructure should.
 
 > It’s not magic. It’s just cloud. And a lot of trial and error.
@@ -162,8 +161,7 @@ Here’s what’s still planned for this project:
 ## 👋 About Me (Real Talk)
 
 I'm a career switcher with **12+ years of entrepreneurial experience in the hospitality industry**,  
-currently transitioning into tech through a **Cloud Engineering track** while also pursuing certification in **systemic-integrative coaching**,  
-to deepen my interpersonal and communication skills.
+currently transitioning into tech through a **Cloud Engineering track** while also pursuing certification in **systemic-integrative coaching**, to deepen my interpersonal and communication skills.
 
 This project reflects not just what I learned technically but also how I learn:  
 hands-on, iterative, resilient, and with a sense of humor that keeps me going.
