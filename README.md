@@ -26,8 +26,8 @@ Includes: EC2, ALB, ASG, RDS, S3, CloudWatch (logs & alarms).
 - [Why Terraform?](#-why-terraform)
 - [Things I Learned](#-things-i-learned)
 - [Final Thoughts](#-final-thoughts)
-- [About Me (Real Talk)](#-about-me-real-talk)
 - [Up Next](#-up-next)
+- [About Me (Real Talk)](#-about-me-real-talk)
 
 ---
 
@@ -150,6 +150,15 @@ Everything running smoothly in the background – just like good infrastructure 
 
 ---
 
+## 🔜 Up Next
+
+Here’s what’s still planned for this project:
+
+- [ ] Migrate IAM Role & Policy creation to Terraform  
+- [ ] Automate CloudWatch alarm setup via Terraform
+
+---
+
 ## 👋 About Me (Real Talk)
 
 I'm a career switcher with **12+ years of entrepreneurial experience in the hospitality industry**,  
@@ -161,12 +170,3 @@ This project reflects not just what I learned technically but also how I learn:
 hands-on, iterative, resilient, and with a sense of humor that keeps me going.
 
 I'm not a finished product. But I show up, I learn fast or at least try to 😅, and I build.
-
----
-
-## 🔜 Up Next
-
-Here’s what’s still planned for this project:
-
-- [ ] Migrate IAM Role & Policy creation to Terraform  
-- [ ] Automate CloudWatch alarm setup via Terraform
