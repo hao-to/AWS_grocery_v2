@@ -162,8 +162,7 @@ Here’s what’s still planned for this project:
 ## 👋 About Me (Real Talk)
 
 I'm a career switcher with **12+ years of entrepreneurial experience in the hospitality industry**,  
-currently transitioning into tech through a **Cloud Engineering track** –  
-while also pursuing certification in **systemic-integrative coaching**,  
+currently transitioning into tech through a **Cloud Engineering track** while also pursuing certification in **systemic-integrative coaching**,  
 to deepen my interpersonal and communication skills.
 
 This project reflects not just what I learned technically but also how I learn:  
