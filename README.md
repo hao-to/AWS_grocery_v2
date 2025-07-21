@@ -1,11 +1,10 @@
 # Grocery App – AWS Cloud Deployment 🚀
 
-This project was built as part of the role-based learning phase in my **Software Engineering Bootcamp** at Masterschool,  
-with a **focus on Cloud Engineering**.
+This project was built as part of the role-based learning phase in my **Software Engineering Bootcamp** at Masterschool, with a **focus on Cloud Engineering**.
 
 It demonstrates the deployment of a containerized grocery web app using key AWS services like EC2, ALB, ASG, RDS, and S3 – applying Infrastructure as Code with **Terraform**.
 
-> Built with patience, persistence – and a few moments of AWS-induced despair.
+> Built with patience, persistence and a few moments of AWS-induced despair.
 
 ---
 
@@ -28,7 +27,7 @@ It demonstrates the deployment of a containerized grocery web app using key AWS 
 This is **not** a tutorial on how to build a grocery app.  
 This is **not** about frontend or backend magic.
 
-This **is** a real-world deployment scenario showing how I set up cloud infrastructure from scratch – and got it to work, eventually:
+This **is** a real-world deployment scenario showing how I set up cloud infrastructure from scratch and got it to work, eventually:
 
 - **EC2** – runs the Docker container  
 - **Application Load Balancer (ALB)** – routes traffic and checks instance health  
@@ -43,7 +42,7 @@ This **is** a real-world deployment scenario showing how I set up cloud infrastr
 
 Original app by [Alejandro Roman Ibanez](https://github.com/AlejandroRomanIbanez), one of my mentors and tutors during this journey.  
 Thank you, Alejandro, for your patience, clarity, and the repo that made this deployment possible. 🙏  
-The app itself wasn’t modified – just everything around it.
+The app itself wasn’t modified, just everything around it.
 
 Original repo: [AWS Grocery App by Alejandro](https://github.com/AlejandroRomanIbanez/AWS_grocery)
 
@@ -58,7 +57,7 @@ Original repo: [AWS Grocery App by Alejandro](https://github.com/AlejandroRomanI
 - **Amazon RDS (PostgreSQL)**: In Private Subnet. Accessible only from EC2 via SG.
 - **Amazon S3**: Stores user avatars. EC2 has IAM Role with limited read/write access.
 - **IAM Role + Policy**: Manually created and attached to EC2 to allow only necessary S3 actions
-- **CloudWatch**: Manually configured to send alerts if EC2 goes down or becomes unreachable
+- **CloudWatch**: Manually configured to send alerts, if EC2 goes down or becomes unreachable
 
 All services live inside a **single VPC**, with **public/private subnets** distributed across **two Availability Zones**.
 
@@ -100,8 +99,7 @@ All services live inside a **single VPC**, with **public/private subnets** distr
 
 Because clicking through the AWS Console is fun exactly once.
 
-We used **Terraform** to define and deploy nearly everything –  
-except for the IAM Role and CloudWatch alarm, which were created manually (for now).
+We used **Terraform** to define and deploy nearly everything except for the IAM Role and CloudWatch alarm, which were created manually (for now).
 
 Terraform allows:
 
@@ -117,8 +115,8 @@ Terraform allows:
 - You need more subnets than you think.
 - ALB won’t forward anything if your TG isn’t healthy.
 - Security Groups are like bouncers: get them wrong, and nobody gets in.
-- IAM roles should be as minimal as possible – and they will still feel too complicated.
-- Terraform is awesome — once you get it. Before that, it’s more like TERRORform.
+- IAM roles should be as minimal as possible and they will still feel too complicated.
+- Terraform is awesome once you get it. Before that, it’s more like TERRORform.
 - AWS logs you out just when you’re finally ready to test.  
   But maybe it knows your limits better than you…
 
@@ -128,10 +126,10 @@ Terraform allows:
 
 This wasn’t about building a new app from scratch.  
 It was about making existing software production-ready in the cloud.  
-It taught me how the pieces of cloud infrastructure fit together, how to troubleshoot under pressure, and how to think like a cloud engineer – not just a developer.
+It taught me how the pieces of cloud infrastructure fit together, how to troubleshoot under pressure, and how to think like a cloud engineer, not just a developer.
 
 If this infrastructure were a partner, you'd just have to say:  
-**"Clean the kitchen."** – and without saying more, the dishes would be done,  
+**"Clean the kitchen."**  and without saying more, the dishes would be done,  
 the trash taken out, the counters wiped, and the floor mopped.  
 Everything running smoothly in the background – just like good infrastructure should.
 
@@ -146,10 +144,10 @@ currently transitioning into tech through a **Cloud Engineering track** –
 while also pursuing certification in **systemic-integrative coaching**,  
 to deepen my interpersonal and communication skills.
 
-This project reflects not just what I learned technically – but also how I learn:  
+This project reflects not just what I learned technically but also how I learn:  
 hands-on, iterative, resilient, and with a sense of humor that keeps me going.
 
-I'm not a finished product. But I show up, I learn fast, and I build.
+I'm not a finished product. But I show up, I learn fast or at least try to 😅, and I build.
 
 ---
 
