@@ -8,10 +8,19 @@ It demonstrates the deployment of a containerized grocery web app using key AWS 
 
 ---
 
+## 🧾 TL;DR
+
+Deployed on AWS using **Terraform** for Infrastructure as Code.  
+Includes: EC2, ALB, ASG, RDS, S3, CloudWatch (logs & alarms).
+
+---
+
 ## 📚 Table of Contents
 
+- [TL;DR](#-tldr)
 - [What This Is (and What It Isn’t)](#-what-this-is-and-what-it-isnt)
 - [Architecture Overview](#-architecture-overview)
+- [Architecture Diagram](#-architecture-diagram)
 - [Security Groups – Who Talks to Whom](#-security-groups--who-talks-to-whom)
 - [Deployment Steps](#-deployment-steps-simplified)
 - [Why Terraform?](#-why-terraform)
@@ -60,6 +69,10 @@ Original repo: [AWS Grocery App by Alejandro](https://github.com/AlejandroRomanI
 - **CloudWatch**: Manually configured to send alerts, if EC2 goes down or becomes unreachable
 
 All services live inside a **single VPC**, with **public/private subnets** distributed across **two Availability Zones**.
+
+---
+
+## 🗺️ Architecture Diagram
 
 ---
 
