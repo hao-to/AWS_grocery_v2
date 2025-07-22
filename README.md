@@ -19,7 +19,7 @@ Includes: **EC2, ALB, ASG, RDS, S3, CloudWatch** (logs & alarms).
 
 - [TL;DR](#-tldr)
 - [What This Is (and What It Isn’t)](#-what-this-is-and-what-it-isnt)
-- [Architecture Overview](#architecture-overview-)
+- [Architecture Overview](#architecture-overview)
 - [Architecture Diagram](./assets/aws-architecture-diagram.png)
 - [Security Groups – Who Talks to Whom](#-security-groups--who-talks-to-whom)
 - [Deployment Steps](#-deployment-steps-simplified)
