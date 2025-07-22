@@ -18,3 +18,4 @@ terraform.tfvars
 
 .DS_Store
 
+infrastructure/public_key.pub
