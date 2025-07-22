@@ -57,7 +57,7 @@ Original repo: [AWS Grocery App by Alejandro](https://github.com/AlejandroRomanI
 
 ---
 
-## ☁️ Architecture Overview
+## ☁ Architecture Overview
 
 - **EC2** (in Public Subnet): Hosts the containerized app. Accessible via SSH (restricted by SG).
 - **Application Load Balancer**: Public-facing, listens on Port 80. Forwards to Target Group (EC2s) on Port 5000.
