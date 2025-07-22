@@ -19,7 +19,7 @@ Includes: **EC2, ALB, ASG, RDS, S3, CloudWatch** (logs & alarms).
 
 - [TL;DR](#-tldr)
 - [What This Is (and What It Isn’t)](#-what-this-is-and-what-it-isnt)
-- [Architecture Overview](#architecture-overview)
+- [Architecture Overview](#-architecture-overview)
 - [Architecture Diagram](./assets/aws-architecture-diagram.png)
 - [Security Groups – Who Talks to Whom](#-security-groups--who-talks-to-whom)
 - [Deployment Steps](#-deployment-steps-simplified)
@@ -57,7 +57,7 @@ Original repo: [AWS Grocery App by Alejandro](https://github.com/AlejandroRomanI
 
 ---
 
-## Architecture Overview ☁️
+## ☁️ Architecture Overview
 
 - **EC2** (in Public Subnet): Hosts the containerized app. Accessible via SSH (restricted by SG).
 - **Application Load Balancer**: Public-facing, listens on Port 80. Forwards to Target Group (EC2s) on Port 5000.
