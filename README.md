@@ -12,6 +12,7 @@ It demonstrates the deployment of a containerized grocery web app using key AWS 
 
 Full-stack grocery app deployed on AWS via **Terraform.**
 Key services: EC2 (Docker), ALB, ASG, RDS (PostgreSQL), S3 (uploads), CloudWatch (logs & alarms).
+
 ---
 
 ## 📚 Table of Contents
