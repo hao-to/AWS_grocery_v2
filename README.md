@@ -10,9 +10,8 @@ It demonstrates the deployment of a containerized grocery web app using key AWS 
 
 ## 🧾 TL;DR
 
-Deployed on AWS using **Terraform** for Infrastructure as Code.  
-Includes: **EC2, ALB, ASG, RDS, S3, CloudWatch** (logs & alarms).
-
+Full-stack grocery app deployed on AWS via Terraform.
+Key services: EC2 (Docker), ALB, ASG, RDS (PostgreSQL), S3 (uploads), CloudWatch (logs & alarms).
 ---
 
 ## 📚 Table of Contents
